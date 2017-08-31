@@ -16,7 +16,7 @@ var Main = (props) => {
             <Route path="/" component={Weather}/>
           </Row>
           <Row>
-            <Route path="/about" component={About}/>
+            <Route path="about" component={About}/>
           </Row>
         </Grid>
       </div>
