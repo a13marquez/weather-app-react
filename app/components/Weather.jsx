@@ -1,7 +1,6 @@
 var React = require('react');
 var WeatherForm = require('WeatherForm');
 var WeatherMessage = require('WeatherMessage');
-var ErroModal = require('ErrorModal');
 var openWeatherMap = require('openWeatherMap');
 
 
@@ -62,7 +61,9 @@ var Weather = React.createClass({
     function renderError(){
       if (typeof errorMessage === 'string'){
         return(
-          <ErroModal message={errorMessage}/>
+          <div>
+            { errorMessage }
+          </div>
         )
       }
     }

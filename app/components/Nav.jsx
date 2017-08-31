@@ -8,22 +8,20 @@ import { NavLink } from'react-router-dom';
 
 
 
-var Navigation = React.createClass({
-  render: function(){
-    return (
-      <Navbar>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="/">React Weather App</a>
-          </Navbar.Brand>
-        </Navbar.Header>
-        <Nav>
-          <NavItem href="/">Get Weather</NavItem>
-          <NavItem href="/about">about</NavItem>
-        </Nav>
-      </Navbar>
-    );
-  }
-})
+var Navigation = (props) => {
+  return (
+    <Navbar>
+      <Navbar.Header>
+        <Navbar.Brand>
+          <a href="/">React Weather App</a>
+        </Navbar.Brand>
+      </Navbar.Header>
+      <Nav>
+        <NavItem href="/">Get Weather</NavItem>
+        <NavItem href="about">About</NavItem>
+      </Nav>
+    </Navbar>
+  );
+};
 
-module.exports = Navigation;
+export default Navigation;

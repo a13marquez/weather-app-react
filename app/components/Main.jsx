@@ -1,7 +1,7 @@
 import React from 'react';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 import { Route } from 'react-router-dom';
-import { Row, Column } from 'react-bootstrap';
+import { Grid, Row, Column } from 'react-bootstrap';
 
 import Weather from 'Weather';
 import About from 'About';
@@ -11,14 +11,16 @@ var Main = (props) => {
   return (
     <div>
       <Navigation/>
-        <div className="md-3">
-          <Route className=""  path="/" component={Weather}/>
-
-          <Route path="/about" component={About}/>
-
+        <Grid>
+          <Row>
+            <Route path="/" component={Weather}/>
+          </Row>
+          <Row>
+            <Route path="/about" component={About}/>
+          </Row>
+        </Grid>
       </div>
-    </div>
   );
 }
 
-module.exports = Main;
+export default Main;
