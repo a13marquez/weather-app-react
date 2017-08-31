@@ -1,10 +1,9 @@
 import React from 'react';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
-import { Route } from 'react-router-dom';
+import { Route } from 'react-router';
 import { Grid, Row, Column } from 'react-bootstrap';
 
-import Weather from 'Weather';
-import About from 'About';
+
 import Navigation from 'Navigation'
 
 var Main = (props) => {
@@ -13,10 +12,7 @@ var Main = (props) => {
       <Navigation/>
         <Grid>
           <Row>
-            <Route path="/" component={Weather}/>
-          </Row>
-          <Row>
-            <Route path="about" component={About}/>
+            {props.children}
           </Row>
         </Grid>
       </div>

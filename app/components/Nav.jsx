@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
-import { NavLink } from'react-router-dom';
+import { IndexLink, Link } from'react-router';
 
 // class Nav extends Component {
 //
@@ -13,12 +13,16 @@ var Navigation = (props) => {
     <Navbar>
       <Navbar.Header>
         <Navbar.Brand>
-          <a href="/">React Weather App</a>
+          <IndexLink to="/">React Weather App</IndexLink>
         </Navbar.Brand>
       </Navbar.Header>
       <Nav>
-        <NavItem href="/">Get Weather</NavItem>
-        <NavItem href="about">About</NavItem>
+        <NavItem>
+          <IndexLink to="/">Get Weather</IndexLink>
+        </NavItem>
+        <NavItem>
+          <Link to="about">About</Link>
+        </NavItem>
       </Nav>
     </Navbar>
   );
