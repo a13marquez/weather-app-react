@@ -9,7 +9,6 @@ class WeatherForm extends Component{
   }
   onFormSubmit (e) {
     e.preventDefault();
-    debugger;
     var location = this.input.value;
     if (location.length > 0) {
       this.input.value = '';

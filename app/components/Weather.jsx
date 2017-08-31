@@ -8,24 +8,25 @@ class Weather extends Component {
   constructor(props){
     super(props);
     this.state = {
-      isLoading:false
-    }
+      props
+    };
+     this.handleSearch = this.handleSearch.bind(this)
   }
 
   handleSearch (location) {
     var self = this;
-    this.state = {
+    this.setState ({
       isLoading:true,
       errorMessage: null,
       location: null,
       weather: null
-    };
+    });
     openWeatherMap.getTemp(location).then(function(weather){
-      self.state = {
+      self.setState({
         location: location,
         weather: weather,
         isLoading: false
-      };
+      });
     }, function(e){
       self.state = {
         isLoading:false,
@@ -73,7 +74,7 @@ class Weather extends Component {
     return (
       <div>
         <h1 className="text-center page-title">Get Weather</h1>
-        <WeatherForm onSearch={this.handleSearch.bind(this)}/>
+        <WeatherForm onSearch={this.handleSearch}/>
         {renderMessage()}
         {renderError()}
       </div>

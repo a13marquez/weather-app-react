@@ -2,7 +2,6 @@ var React = require('react');
 
 
 var WeatherMessage = ({weather, location}) => {
-  debugger;
   return (
     <div>
     <h3 className="text-center">Weather in {location}.</h3>

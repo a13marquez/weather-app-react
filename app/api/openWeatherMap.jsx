@@ -10,7 +10,6 @@ function getTemp (location){
     if(res.data.cod && res.data.message){
       throw new Error(res.data.message);
     } else {
-      debugger;
       return res.data.main;
     }
   }, function(err){
